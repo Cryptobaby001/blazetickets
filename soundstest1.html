@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paranormal Underground Tickets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+        #ticket-purchase {
+            text-align: center;
+        }
+        #purchase-button {
+            background-color: #b8860b; /* Dark Yellow */
+            font-size: 1.2em;
+            margin: 20px auto;
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+            display: block;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Paranormal Underground Tickets</h1>
+    </header>
+
+    <nav>
+        <a href="#event-details" onclick="toggleSection('event-details')">Event Details</a>
+        <a href="#ticket-purchase" onclick="toggleSection('ticket-purchase')">Ticket Purchase</a>
+        <!-- Add more navigation links as needed -->
+    </nav>
+
+    <main>
+        <section id="event-details" class="show">
+            <h2>Event Details</h2>
+            <!-- Add event details content here -->
+            <p>Date: October 28, 2023</p>
+            <p>Venue: Atlanta Underground</p>
+            <p>Time: TBD</p>
+        </section>
+        <section id="ticket-purchase">
+            <h2>Ticket Purchase</h2>
+            <!-- Add ticket purchase content here -->
+            
+            <p>Price per Ticket: $89.00</p>
+            <label for="ticket-quantity">Quantity:</label>
+            <select id="ticket-quantity" name="ticket-quantity" onchange="calculateTotal()">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <!-- Add more options as needed -->
+            </select>
+            
+            <p>Total: <span id="total"> $89.00</span></p>
+            <input type="email" id="user-email" placeholder="Email address">
+            
+            <p>Select Payment Option:</p>
+            <label><input type="radio" name="payment-option" value="crypto"> Crypto</label>
+            <label><input type="radio" name="payment-option" value="gift-card"> Gift Card</label>
+
+            <div id="purchase-button" onclick="purchase()">Purchase</div>
+        </section>
+    </main>
+
+    <script>
+        function toggleSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('show');
+            });
+
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('show');
+        }
+
+        function calculateTotal() {
+            const quantity = document.getElementById('ticket-quantity').value;
+            const pricePerTicket = 89.00; // Change this to the actual price per ticket
+            const total = quantity * pricePerTicket;
+            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+        }
+
+        function purchase() {
+            const userEmail = document.getElementById('user-email').value;
+            const paymentOption = document.querySelector('input[name="payment-option"]:checked').value;
+
+            // Add your logic for handling the purchase with userEmail and paymentOption
+
+            if (paymentOption === 'crypto') {
+                window.location.href = 'Cryptopayment1.html';
+            } else if (paymentOption === 'gift-card') {
+                window.location.href = 'gift_card_purchase.html';
+            }
+        }
+    </script>
+
+</body>
+</html>

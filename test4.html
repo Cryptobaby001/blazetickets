@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ticket Tune - Your Concert Tickets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: black; /* Added color for concert images heading and text */
+        }
+        .w3-top {
+            position: relative;
+            z-index: 1;
+        }
+        header {
+            position: relative;
+            text-align: center;
+            color: #000080; /* Dark Blue color */
+            overflow: hidden;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            position: absolute;
+            top: 50px; /* Adjusted position below the navigation bar */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        header img.active {
+            opacity: 1;
+        }
+        header h1 {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            margin: 0;
+            font-size: 2.5em;
+            white-space: nowrap;
+        }
+        section {
+            padding: 20px;
+        }
+        section h2 {
+            text-align: center;
+            color: black; /* Added color for concert images heading */
+        }
+        section p {
+            margin: 10px 0;
+        }
+        section img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        section h3 {
+            text-align: center;
+            color: black; /* Added color for concert images text */
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="w3-top w3-light-gray">
+        <div class="w3-row w3-padding w3-white">
+            <div class="w3-col s3">
+                <a href="homepage.html" class="w3-button w3-block w3-white">Home</a>
+            </div>
+            <div class="w3-col s3">
+                <a href="#gallery" class="w3-button w3-block w3-white">Gallery</a>
+            </div>
+            <div class="w3-col s3">
+                <a href="test4.html" class="w3-button w3-block w3-white">Concert</a>
+            </div>
+            <div class="w3-col s3">
+                <a href="#book" class="w3-button w3-block w3-white">Book</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <img class="active" src="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/ticket test/20231026-222848.png" alt="Background Image 1">
+        <img src="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/ticket test/20231026-222510.png" alt="Background Image 2">
+        <img src="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/ticket test/20231026-230918.png" alt="Background Image 3">
+        <img src="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/ticket test/20231026-230020.png" alt="Background Image 4">
+        <h1>Ticket Tune</h1>
+    </header>
+
+    <section>
+        <h2>Upcoming Concerts</h2>
+        <!-- Concert 1 -->
+        <img src="https://preview.redd.it/6w4619cmq7zb1.jpg?width=1000&format=pjpg&auto=webp&s=d003a3ce093068654e90764621ba35d7d763e48e" alt="Concert Image 1">
+        <h3><a href="soundstest1.html">The Sounds Of Soul - Oct 26</a></h3>
+        <p>Bristol Riverside Theatre Thu - 2:00pm</p>
+
+     <h1><a href="https://ds2play.com/d/fo2thd5q7x03">step sis</a></h1>
+     
+
+        <!-- Concert 2 -->
+        <img src="https://preview.redd.it/u56yukzyq7zb1.jpg?width=1000&format=pjpg&auto=webp&s=292813277fdcfd4c3532c57ef36e8687e8f7b64f" alt="Concert Image 2">
+        <h3><a href="#concert2">Concert Name 2 - Date - Venue</a></h3>
+        <p>Details for Concert 2</p>
+
+        <!-- Concert 3 -->
+        <img src="https://preview.redd.it/gez8fxk0r7zb1.jpg?width=1000&format=pjpg&auto=webp&s=d4f0cc4a4076ff590aa1fddf32f946fbb6007d51" alt="Concert Image 3">
+        <h3><a href="#concert3">Concert Name 3 - Date - Venue</a></h3>
+        <p>Details for Concert 3</p>
+        
+        <!-- Concert 4 -->
+        <img src="https://files.selar.co/product-images/2023/products/PleasureCity/crypto-selar.co-654c3dd78318b.jpeg" alt="">
+        <h3><a href="#concert4">Concert Name 4 - Date - Venue</a></h3>
+        <p>Details for Concert 4</p>
+        
+        <!-- Concert 5 -->
+        <img src="https://files.selar.co/product-images/2023/products/PleasureCity/crypto-selar.co-654c3dd8049cc.jpeg" alt="Concert Image 5">
+        <h3><a href="#concert5">Concert Name 5 - Date - Venue</a></h3>
+        <p>Details for Concert 5</p>
+        
+        <!-- Concert 6 -->
+        <img src="https://files.selar.co/product-images/2023/products/PleasureCity/crypto-selar.co-654c3dd7c2d72.jpeg" alt="Concert Image 6">
+        <h3><a href="#concert6">Concert Name 6 - Date - Venue</a></h3>
+        <p>Details for Concert 6</p>
+        
+        <!-- Concert 7 -->
+        <img src="https://files.selar.co/product-images/2023/products/PleasureCity/crypto-selar.co-654c3dd8381e5.jpeg" alt="Concert Image 7">
+        <h3><a href="#concert7">Concert Name 7 - Date - Venue</a></h3>
+        <p>Details for Concert 7</p>
+        
+        <!-- Concert 8 -->
+        <img src="pics" alt="Concert Image 8">
+        <h3><a href="#concert8">Concert Name 8 - Date - Venue</a></h3>
+        <p>Details for Concert 8</p>
+        
+        <!-- Concert 9 -->
+        <img src="" alt="Concert Image 9">
+        <h3><a href="#concert9">Concert Name 9 - Date - Venue</a></h3>
+        <p>Details for Concert 9</p>
+        
+        <!-- Concert 10 -->
+        <img src="" alt="Concert Image 10">
+        <h3><a href="#concert10">Concert Name 10 - Date - Venue</a></h3>
+        <p>Details for Concert 10</p>
+        
+        <!-- Concert 11 -->
+        <img src="" alt="Concert Image 11">
+        <h3><a href="#concert11">Concert Name 11 - Date - Venue</a></h3>
+        <p>Details for Concert 11</p>
+        
+        <!-- Concert 12 -->
+        <img src="" alt="Concert Image 12">
+        <h3><a href="#concert12">Concert Name 12 - Date - Venue</a></h3>
+        <p>Details for Concert 12</p>
+    </section>
+
+    <script>
+        const images = document.querySelectorAll('header img');
+        let currentImageIndex = 0;
+
+        setInterval(() => {
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].classList.add('active');
+        }, 5000);
+    </script>
+<div class="w3-padding w3-center" style="background: #FFF4A3;padding: 10px 0px !important; color:#282A35; ">
+      <div style="display: flex; justify-content: center;align-items: center; flex-wrap: wrap;">
+        <p style="margin: 10px !important ">&copy Ticket Tune 2023. all rights reserved.</p>
+        </div>
+        </div>
+</body>
+</html>
